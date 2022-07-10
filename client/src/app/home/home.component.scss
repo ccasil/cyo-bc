@@ -1,0 +1,46 @@
+$primary: #dbd5d1;
+$secondary: #aea393;
+$tertiary: #8d7961;
+
+.containerwave {
+  position: relative;
+  background: $primary;
+  height: 10vh;
+}
+
+.wave {
+  position: absolute;
+  height: 70px;
+  width: 100%;
+  background: $primary;
+  bottom: 0;
+}
+
+.wave::before,
+.wave::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+}
+
+.wave::before {
+  width: 55%;
+  height: 109%;
+  background-color: $secondary;
+  right: -1.5%;
+  top: 60%;
+}
+
+.wave::after {
+  width: 55%;
+  height: 100%;
+  background-color: $primary;
+  left: -1.5%;
+  top: 40%;
+}
+
+.form-check-input:checked {
+    background-color: $tertiary !important;
+    border-color: $tertiary !important;
+  }

@@ -1,0 +1,19 @@
+// Variable overrides first
+$primary: #dbd5d1;
+$secondary: #aea393;
+$info: #8d7961;
+$enable-shadows: true;
+// $prefix: "mo-";
+
+// Then import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+html,
+body {
+  padding: 0px !important;
+  margin: 0px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}

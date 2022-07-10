@@ -1,0 +1,38 @@
+<div class="container-fluid bg-primary">
+    <div class="container pt-5">
+        <div class="row">
+          <div class="col">
+            <form id="cardForm" name="cardForm" [formGroup]="cardForm">
+              <input type="text" class="form-control mb-2" name="name" formControlName="name" placeholder="name">
+              <input type="email" class="form-control" name="email" formControlName="email" placeholder="email">
+              <label for="img" class="mt-2 btn btn-secondary d-block">Click me to upload a profile picture</label>
+              <input type="file" class="form-control d-none" (change)="onFileChanged($event)" id="img">
+              <label for="img" class="mt-2 btn btn-secondary d-block">Click me to upload a background image</label>
+              <input type="file" class="form-control d-none" (change)="onFileChanged($event)" id="img">
+              <div class="form-check form-switch mt-2">
+                <input (change)="onSwitchChanged()" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                <label class="form-check-label" for="flexSwitchCheckChecked" class="fw-bold" [ngClass]="lightdarkswitch?'text-dark':'text-light'">{{ brighttext }} Text</label>
+              </div>
+            </form>
+            <p>{{ message }}</p>
+          </div>
+          <div class="col">
+            <div class="border bg-info p-3 rounded shadow-sm" *ngIf="cardInfo">
+              <div class="" [ngClass]="lightdarkswitch?'text-dark':'text-light'">
+                {{ cardInfo.name }}
+              </div>
+              <div class="" [ngClass]="lightdarkswitch?'text-dark':'text-light'">
+                {{ cardInfo.email }}
+              </div>
+              <img *ngIf="url" class="img-fluid" src={{url}}>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<section class="containerwave">
+  <div class="wave">
+  </div>
+</section>
